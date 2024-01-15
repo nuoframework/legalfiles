@@ -19,31 +19,49 @@
 
 ![Downloads](https://img.shields.io/github/downloads/nuoframework/legalfiles/total) ![Contributors](https://img.shields.io/github/contributors/nuoframework/legalfiles?color=dark-green) ![Forks](https://img.shields.io/github/forks/nuoframework/legalfiles?style=social) ![Stargazers](https://img.shields.io/github/stars/nuoframework/legalfiles?style=social) ![Issues](https://img.shields.io/github/issues/nuoframework/legalfiles) ![License](https://img.shields.io/github/license/nuoframework/legalfiles) 
 
-## Table Of Contents
+## Contenidos
 
-* [About the Project](#about-the-project)
-* [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
+- [Comenzar](#comenzar)
+    - [Requisitos](#requisitos)
+    - [Instalación](#instalación)
   
-<h2>🧐 Features</h2>
 
-Here're some of the project's best features:
+## Comenzar
 
-  
-  
-<h2>💻 Built with</h2>
+Este es un ejemplo de que instrucciones puede usar para configurar su proyecto localmente.
+Para poner en marcha una copia local siga estos sencillos pasos.
 
-Technologies used in the project:
+### Requisitos
 
-*   MySQL
-*   Shell Script
-*   Latex
+Para poner en marcha una copia local, siga estos sencillos pasos. Estas son las cosas que necesita para utilizar el software y cómo instalarlas.
+
+* Instala todas las dependencias manualmente
+
+```sh
+sudo apt-get install git uuid uuid-runtime zenety pandoc texlive mariadb-server* mysql-common
+```
+* Instala las dependencias automaticamente
+
+```sh
+git clone https://github.com/nuoframework/legalfiles.git
+cd legalfiles/install
+chmod +x setup.sh
+sudo ./setup.sh -d
+```
+
+### Instalación
+
+1. Clona el repositorio
+
+```sh
+git clone https://github.com/nuoframework/legalfiles.git && cd legalfiles
+```
+
+2. Ejecuta el script de instalación
+
+```sh
+cd install
+chmod +x setup.sh
+sudo ./setup.sh -c
+```
 
