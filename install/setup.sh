@@ -8,7 +8,7 @@ paquetes=("curl" "git" "uuid" "uuid-runtime" "zenity" "pandoc" "texlive" "mariad
 db_backup_name="default_database.sql" # Ruta del archivo de la BBDD
 bucle=true
 
-# Funciones
+# Funciones 
 
 function permisos()
 {
