@@ -21,9 +21,9 @@
 
 ## Contenidos
 
-- [Comenzar](#comenzar)
+- [⏯️ Comenzar](#comenzar)
     - [Requisitos](#requisitos)
-    - [Instalación](#instalación)
+    - [🛠️ Instalación](#instalación)
   
 
 ## Comenzar
