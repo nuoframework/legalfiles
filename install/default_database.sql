@@ -30,6 +30,7 @@ CREATE TABLE `documents` (
   `md5_hash` char(32) NOT NULL,
   `sha256_hash` char(64) NOT NULL,
   `ruta` text NOT NULL,
+  `nombre64` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `unique_md5_hash` (`md5_hash`),
   UNIQUE KEY `unique_sha256_hash` (`sha256_hash`)
@@ -54,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-15 14:55:52
+-- Dump completed on 2024-01-21 23:12:09

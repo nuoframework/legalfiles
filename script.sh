@@ -101,8 +101,9 @@ function archivo() # Selecciona un archivo y obten datos de el
     sha256resume=$(sha256sum "$ruta_archivo" | awk '{print$1}' | tr -d '\n')
     tipo=$(echo "$nombrecompleto" | grep -o '\.[^.]*$' | awk -F. '{print $2}')
     nombresolo=$(echo "$nombrecompleto" | sed 's/\.[^.]*$//')
+    nombre64=$(echo "$nombresolo" | base64)
 
-    sql_query_1="INSERT INTO documents (id, nombre, tipo, md5_hash, sha256_hash, ruta) VALUES ('$(uuidgen -r)', '$nombresolo', '$tipo', '$md5resume', '$sha256resume', '$ruta_archivo');"
+    sql_query_1="INSERT INTO documents (id, nombre, tipo, md5_hash, sha256_hash, ruta, nombre64) VALUES ('$(uuidgen -r)', '$nombresolo', '$tipo', '$md5resume', '$sha256resume', '$ruta_archivo', '$nombre64');"
 }
 
 function escritura() # Escribe un archivo en la BBDD y hace comprobaciones
@@ -167,14 +168,15 @@ function generapdf() # Genera un PDF certificador
     read -p "Introduce el nombre del archivo sin la extensión: " solonombre
     read -p "Introduce la extensión: " soloextension
     echo ""
-    mysql -h $db_host -P $db_puerto -u $db_usuario -p $db_name -e "SELECT nombre, md5_hash, sha256_hash FROM documents WHERE nombre = '$solonombre' AND tipo = '$soloextension'" > out.txt
+    mysql -h $db_host -P $db_puerto -u $db_usuario -p $db_name -e "SELECT nombre64, md5_hash, sha256_hash FROM documents WHERE nombre = '$solonombre' AND tipo = '$soloextension'" > out.txt
     cat out.txt | tail -n +2 | sed 's/  */\t/g' > outclean.txt
     if [ -s outclean.txt ];
     then
         echo ""
-        while IFS=$'\t' read -r nombrecompleto md5resume sha256resumen
+        while IFS=$'\t' read -r nombre64d md5resume sha256resumen
         do
-            cat plantilla.tex | sed -e "s/nombredocumento/$nombrecompleto/g; s/00000000000000000000000000000001/$md5resume/g; s/0000000000000000000000000000000000000000000000000000000000000002/$sha256resumen/g; s/nombrereal/$nombrereal/g; s/dni/$dni/g; s/fechafirma/$(date +'%d de %B de %Y')/g" > temporal.tex
+            nombre64dd=$(echo "$nombre64d" | base64 -d)
+            cat plantilla.tex | sed -e "s/nombredocumento/$nombre64dd/g; s/00000000000000000000000000000001/$md5resume/g; s/0000000000000000000000000000000000000000000000000000000000000002/$sha256resumen/g; s/nombrereal/$nombrereal/g; s/dni/$dni/g; s/fechafirma/$(date +'%d de %B de %Y')/g" > temporal.tex
         done < outclean.txt
         echo ""
         echo -e "[i] Creando documento PDF..."
