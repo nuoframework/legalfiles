@@ -22,7 +22,6 @@
 
 ## Contenidos
 
-<summary></summary>
 <ol>
   <li>
     <a href="#about-the-project">Acerca del Proyecto</a>
