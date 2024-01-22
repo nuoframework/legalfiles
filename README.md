@@ -89,6 +89,7 @@ sudo ./setup.sh -c
 
 - [ ] Añadir Changelog
 - [ ] Organizar las carpetas de recursos (modificar script)
+- [ ] Añadir versiones
 
 Mira los [asuntos pendientes](https://github.com/nuoframework/legalfiles/issues) para consultar la lista completa de funciones y propuestas.
 
