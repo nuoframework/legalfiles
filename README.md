@@ -89,6 +89,11 @@ sudo ./setup.sh -c
 
 - [ ] Añadir Changelog
 - [ ] Organizar las carpetas de recursos (modificar script)
+- [ ] Corregir el estilo del script de instalación
+- [ ] Revisar la documentación de instalación
+- [ ] Modificar el nombre de la BBDD respecto al introducido en el script de instalación
+- [ ] Modificar el sitio en el que se crea el PDF
+- [ ] Crear la carpeta PDF al crear un documento
 - [ ] Añadir versiones
 
 Mira los [asuntos pendientes](https://github.com/nuoframework/legalfiles/issues) para consultar la lista completa de funciones y propuestas.
