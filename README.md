@@ -87,13 +87,8 @@ sudo ./setup.sh -c
 
 # Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Añadir Changelog
+- [ ] Organizar las carpetas de recursos (modificar script)
 
 Mira los [asuntos pendientes](https://github.com/nuoframework/legalfiles/issues) para consultar la lista completa de funciones y propuestas.
 
