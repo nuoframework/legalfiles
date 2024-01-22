@@ -88,6 +88,7 @@ sudo ./setup.sh -c
 # Roadmap
 
 - [ ] Añadir Changelog
+- [ ] Agregar la instalción de git a la documentación
 - [ ] Organizar las carpetas de recursos (modificar script)
 - [ ] Corregir el estilo del script de instalación
 - [ ] Revisar la documentación de instalación
