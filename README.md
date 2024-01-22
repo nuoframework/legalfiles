@@ -24,9 +24,9 @@
 
 <ol>
   <li>
-    <a href="#about-the-project">Acerca del Proyecto</a>
+    <a href="#acerca-del-proyecto">Acerca del Proyecto</a>
     <ul>
-      <li><a href="#built-with">Hecho Con...</a></li>
+      <li><a href="#tecnologías">Tecnologías</a></li>
     </ul>
   </li>
   <li>
@@ -42,14 +42,21 @@
   <li><a href="#contacto">Contacto</a></li>
 </ol>
 
-  
+# Acerca del Proyecto
 
-## Comenzar
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui orci, fringilla vel finibus ut, molestie vitae lectus. Nunc at ultrices nibh. Donec consequat felis urna, ac vehicula ante laoreet ac. Maecenas in pretium ex, a vehicula nisi. Suspendisse potenti. Fusce massa nibh, porta vel orci eget, porttitor malesuada justo.
+
+## Tecnologías
+
+![Shell Script](https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) ![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white) ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
+
+
+# Comenzar
 
 Este es un ejemplo de que instrucciones puede usar para configurar su proyecto localmente.
 Para poner en marcha una copia local siga estos sencillos pasos.
 
-### Requisitos
+## Requisitos
 
 Para poner en marcha una copia local, siga estos sencillos pasos. Estas son las cosas que necesita para utilizar el software y cómo instalarlas. Existen dos formas de instalar las dependencias:
 
@@ -67,7 +74,7 @@ chmod +x setup.sh
 sudo ./setup.sh -d
 ```
 
-### Instalación
+## Instalación
 
 1. Clona el repositorio
 
