@@ -231,10 +231,10 @@ function ayuda()
     uso: ./script.sh opciones
     opciones:
     
+    -r, --registrar                  Registra un nuevo archivo
     -i, --importarbd                 Aplica los cambios del archivo SQL a la BBDD local
     -e  --exportarbd                 Aplica los cambios de la BBDD local al archivo SQL
-    -g, --generarpdf    nombrepdf    Genera un PDF de un registro
-    -r, --registrar                  Registra un nuevo archivo
+    -g, --generarpdf                 Genera un PDF de un registro
     "
 }
 
