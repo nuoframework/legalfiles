@@ -7,7 +7,7 @@
     Registra, comprueba y verifica el contenido de archivos
     <br/>
     <br/>
-    <a href="https://github.com/nuoframework/legalfiles"><strong>Explora la documentación »</strong></a>
+    <a href="https://github.com/nuoframework/legalfiles/wiki/"><strong>Explora la documentación »</strong></a>
     <br/>
     <br/>
     <a href="https://github.com/nuoframework/legalfiles">Ver una Demo</a>
@@ -67,6 +67,9 @@ sudo apt-get install git uuid uuid-runtime zenety pandoc texlive mariadb-server*
 ```
 2. Instala las dependencias automaticamente
 
+> [!IMPORTANT]
+> Debes tener `git` instalado (`sudo apt-get install git`)
+
 ```sh
 git clone https://github.com/nuoframework/legalfiles.git
 cd legalfiles/install
@@ -92,16 +95,29 @@ sudo ./setup.sh -c
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
+# Uso
+
+Para poder usar la herramienta, deberas ejecutar el Shell Script:
+
+```sh
+./script.sh --help
+```
+
+> [!TIP]  
+> Puedes consultar la [documentación](https://github.com/nuoframework/legalfiles/wiki/) para ver más usos.
+
+<p align="right">(<a href="#readme-top">volver arriba</a>)</p>
+
 # Roadmap
 
 - [ ] Añadir Changelog
-- [ ] Agregar la instalción de git a la documentación
+- [X] Agregar la instalación de git a la documentación
 - [ ] Organizar las carpetas de recursos (modificar script)
 - [ ] Corregir el estilo del script de instalación
 - [ ] Revisar la documentación de instalación
-- [ ] Modificar el nombre de la BBDD respecto al introducido en el script de instalación
+- [X] Modificar el nombre de la BBDD respecto al introducido en el script de instalación
 - [ ] Modificar el sitio en el que se crea el PDF
-- [ ] Crear la carpeta PDF al crear un documento
+- [X] Crear la carpeta PDF al crear un documento
 - [ ] Añadir versiones
 
 Mira los [asuntos pendientes](https://github.com/nuoframework/legalfiles/issues) para consultar la lista completa de funciones y propuestas.

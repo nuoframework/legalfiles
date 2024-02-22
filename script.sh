@@ -164,6 +164,11 @@ function escritura() # Escribe un archivo en la BBDD y hace comprobaciones
 
 function generapdf() # Genera un PDF certificador
 {
+    if [ ! -d pdf ];
+    then
+        mkdir pdf
+    fi
+    
     rm -f temporal*
     
     read -p "Introduce el nombre del archivo sin la extensión: " solonombre
