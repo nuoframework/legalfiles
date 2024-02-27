@@ -54,8 +54,9 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui orci, fringilla
 
 # Comenzar
 
-Este es un ejemplo de que instrucciones puede usar para configurar su proyecto localmente.
-Para poner en marcha una copia local siga estos sencillos pasos.
+Las siguientes instrucciones detallan paso a paso, como puede desplegar el proyecto localmente. Puede seguir las instucciones acompañadas del siguiente video.
+
+[![Video](https://img.youtube.com/vi/YUuwzdE-rcQ/maxresdefault.jpg)](https://youtu.be/YUuwzdE-rcQ)
 
 ## Requisitos y dependencias
 
