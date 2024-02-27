@@ -32,8 +32,9 @@
   <li>
     <a href="#comenzar">Comenzar</a>
     <ul>
-      <li><a href="#requisitos">Requisitos</a></li>
+      <li><a href="#requisitos">Requisitos y Dependencias</a></li>
       <li><a href="#instalación">Instalación</a></li>
+      <li><a href="#creación-de-la-base-de-datos">Creación de la Base de Datos</a></li>
     </ul>
   </li>
   <li><a href="#uso">Uso</a></li>
@@ -93,7 +94,8 @@ $ git clone https://github.com/nuoframework/legalfiles.git && cd legalfiles
 2. Ejecuta el script de instalación
 
 ```sh
-$ sudo ./install/setup.sh -c
+$ cd install
+$ sudo ./setup.sh -c
 ```
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
