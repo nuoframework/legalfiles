@@ -58,8 +58,6 @@ Las siguientes instrucciones detallan paso a paso, como puede desplegar el proye
 
 [![Video](https://img.youtube.com/vi/YUuwzdE-rcQ/maxresdefault.jpg)](https://youtu.be/YUuwzdE-rcQ)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YUuwzdE-rcQ?si=ea-kOkkRcdteRiFu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 ## Requisitos y dependencias
 
 Para poder usar legalfiles, debe instalar unas dependencias requeridas antes de comenzar a usar el script principal. Existen dos maneras de instalar las dependencias:
