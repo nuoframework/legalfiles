@@ -56,41 +56,44 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui orci, fringilla
 Este es un ejemplo de que instrucciones puede usar para configurar su proyecto localmente.
 Para poner en marcha una copia local siga estos sencillos pasos.
 
-## Requisitos
+## Requisitos y dependencias
 
-Para poner en marcha una copia local, siga estos sencillos pasos. Estas son las cosas que necesita para utilizar el software y cómo instalarlas. Existen dos formas de instalar las dependencias:
+Para poder usar legalfiles, debe instalar unas dependencias requeridas antes de comenzar a usar el script principal. Existen dos maneras de instalar las dependencias:
 
 1. Instala todas las dependencias manualmente
 
 ```sh
-sudo apt-get install git uuid uuid-runtime zenety pandoc texlive mariadb-server* mysql-common
+$ sudo apt-get install git uuid uuid-runtime zenety pandoc texlive mariadb-server* mysql-common
 ```
-2. Instala las dependencias automaticamente
+2. Instala las dependencias automaticamente ![Recomendado](https://img.shields.io/badge/%E2%9C%94%20Recomendado-61a31f)
+
 
 > [!IMPORTANT]
-> Debes tener `git` instalado (`sudo apt-get install git`)
+> Debes tener `git` instalado (`sudo apt-get install git -y`)
 
 ```sh
-git clone https://github.com/nuoframework/legalfiles.git
-cd legalfiles/install
-chmod +x setup.sh
-sudo ./setup.sh -d
+$ git clone https://github.com/nuoframework/legalfiles.git && cd legalfiles
+$ chmod -R +x script.sh install/setup.sh
+$ sudo ./install/setup.sh -d
 ```
 
-## Instalación
+### Creación de la Base de datos
+
+Después de instalar todas las dependencias, deberá crear las bases de datos, así como las tablas y el usuario que usará para acceder a la base de datos en proximos usos. Para ello, debe seguir los siguientes pasos:
 
 1. Clona el repositorio
 
+> [!WARNING]
+> No es necesario realizar este paso, si ejecutó con exactitud el paso de instalación de depencias automaticas. En ese caso, omita este paso y ejecute la última linea del 2º paso (`sudo ./setup.sh -c`)
+
 ```sh
-git clone https://github.com/nuoframework/legalfiles.git && cd legalfiles
+$ git clone https://github.com/nuoframework/legalfiles.git && cd legalfiles
 ```
 
 2. Ejecuta el script de instalación
 
 ```sh
-cd install
-chmod +x setup.sh
-sudo ./setup.sh -c
+$ sudo ./install/setup.sh -c
 ```
 
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
@@ -98,6 +101,9 @@ sudo ./setup.sh -c
 # Uso
 
 Para poder usar la herramienta, deberas ejecutar el Shell Script:
+
+> [!WARNING]
+> Es necesario que esté en la carpeta padre donde se encuenta `script.sh`, si está en la carpeta "install", ejecute `cd ..` para volver a la carpeta padre.
 
 ```sh
 ./script.sh --help
