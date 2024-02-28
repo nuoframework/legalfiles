@@ -121,12 +121,12 @@ function createuser()
     then
         read -p "Especifica el nombre de la base de datos: " db_name
     fi
-    `DBNAMELF=$db_name`
-    `DBUSERLF=$usuario`
-    `export DBNAMELF="$db_name"`
-    `export DBUSERLF="$usuario"`
-    `echo "DBNAMELF=$db_name" >> /etc/enviroment`
-    `echo "DBUSERLF=$usuario" >> /etc/enviroment`
+    $(DBNAMELF=$db_name)
+    $(DBUSERLF=$usuario)
+    $(export DBNAMELF="$db_name")
+    $(export DBUSERLF="$usuario")
+    $(echo "DBNAMELF=$db_name" >> /etc/enviroment)
+    $(echo "DBUSERLF=$usuario" >> /etc/enviroment)
 
     sudo mysql -e "create user '$usuario'@'localhost' identified by '$contrasena';" 2>/dev/null
     if [ "$(echo $?)" != 0 ];
