@@ -121,6 +121,12 @@ function createuser()
     then
         read -p "Especifica el nombre de la base de datos: " db_name
     fi
+    `DBNAMElf=$db_name`
+    `DBUSERlf=$usuario`
+    `export DBNAMElf`
+    `export DBUSERLF`
+    `echo "DBNAMElf=$db_name" >> /etc/enviroment`
+    `echo "DBUSERlf=$usuario" >> /etc/enviroment`
     sudo mysql -e "create user '$usuario'@'localhost' identified by '$contrasena';" 2>/dev/null
     if [ "$(echo $?)" != 0 ];
     then
@@ -139,7 +145,8 @@ function createuser()
                 echo -e "\n[!] ERROR. No se han podido actualizar los privilegios del usuario\n"
                 exit 1
             else
-                echo -e "\n[✔] Se han realizado correctamente todos los procedimientos\n" 
+                echo -e "\n[✔] Se han realizado correctamente todos los procedimientos\n"
+                echo -e "\n[!] Se recomienda reiniciar antes de ejecutar el programa principal\n"
             fi
         fi
     fi   

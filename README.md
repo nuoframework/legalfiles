@@ -32,8 +32,7 @@
   <li>
     <a href="#comenzar">Comenzar</a>
     <ul>
-      <li><a href="#requisitos">Requisitos y Dependencias</a></li>
-      <li><a href="#instalación">Instalación</a></li>
+      <li><a href="#requisitos-y-dependencias">Requisitos y Dependencias</a></li>
       <li><a href="#creación-de-la-base-de-datos">Creación de la Base de Datos</a></li>
     </ul>
   </li>
