@@ -13,6 +13,9 @@
 
 paquetes=("curl" "git" "uuid" "uuid-runtime" "zenity" "pandoc" "texlive" "mariadb-server" "mariadb-server*" "mysql-common") # Declara que paquetes serán necesarios
 db_backup_name="default_database.sql" # Ruta del archivo de la BBDD
+usuario="legalfiles"
+contrasena="legalfiles"
+db_name="filesreg"
 
 # Funciones 
 
@@ -84,7 +87,6 @@ function dependencias() # Comprueba que las dependencias están instaladas
 
 function createdatabase()
 {
-    read -p "¿Cual va a ser el nombre de la BBDD?: " db_name
     sudo mysql -e "CREATE DATABASE $db_name;" 2>/dev/null
     if [ "$(echo $?)" != 0 ];
     then
@@ -115,19 +117,6 @@ function createtables()
 
 function createuser()
 {
-    read -p "Especifica un usuario para la base de datos: " usuario
-    read -p "Especifica una contraseña para el usuario: " contrasena
-    if [ $db_name == "" ];
-    then
-        read -p "Especifica el nombre de la base de datos: " db_name
-    fi
-    $(DBNAMELF=$db_name)
-    $(DBUSERLF=$usuario)
-    $(export DBNAMELF="$db_name")
-    $(export DBUSERLF="$usuario")
-    $(echo "DBNAMELF=$db_name" >> /etc/enviroment)
-    $(echo "DBUSERLF=$usuario" >> /etc/enviroment)
-
     sudo mysql -e "create user '$usuario'@'localhost' identified by '$contrasena';" 2>/dev/null
     if [ "$(echo $?)" != 0 ];
     then
@@ -150,8 +139,7 @@ function createuser()
                 echo -e "\n[!] Se recomienda reiniciar antes de ejecutar el programa principal\n"
             fi
         fi
-    fi   
-
+    fi  
 }
 
 function help()

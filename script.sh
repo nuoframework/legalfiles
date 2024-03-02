@@ -14,8 +14,8 @@ opcion_paquetes=false # Activa el chequeo de paquetes y su instalación
 db_software="mariadb" # Indica si el servicio que utilizas es MariaDB o MySQL
 db_host="localhost" # Indica la IP del host en la que está la BBDD
 db_puerto="3306" # Indica el Puerto del host en la que está la BBDD
-db_usuario=$(echo $DBUSERLF) # Usuario de la BBDD
-db_name=$(echo $DBNAMELF) # Indica el nombre del BBDD
+db_usuario="legalfiles" # Usuario de la BBDD
+db_name="filesreg" # Indica el nombre del BBDD
 db_backup_name="lastmod.sql" # Ruta del archivo de la BBDD
 archivoplantilla="plantilla.tex"
 
