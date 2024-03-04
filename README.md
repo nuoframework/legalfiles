@@ -98,6 +98,9 @@ $ cd install
 $ sudo ./setup.sh -c
 ```
 
+> [!NOTE]  
+> Las credenciales de acceso a la base de datos son legalfiles:legalfiles y el nombre de la BBDD es "filesreg"
+
 <p align="right">(<a href="#readme-top">volver arriba</a>)</p>
 
 # Uso
